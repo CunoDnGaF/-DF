@@ -100,7 +100,7 @@
     text-decoration: underline;
   }
   
-  .menu-item-two, .menu-item-two, .menu-item-three, .menu-item-four, .menu-item-five, .menu-item-six {
+   .menu-item, .menu-item-two {
     margin-left: 35px;
   }
   
@@ -137,14 +137,21 @@
 
   .trends {
     display: flex;
+    gap: 5px;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
     width: 100%;
   }
 
-  .card-one, .card-two, .card-three, .card-four {
-    width: 24.8%;
+  .card-gruppe {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 5px;
+  }
+
+  .card {
+    flex: 1;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -161,7 +168,7 @@
     position: relative;
   }
 
-  .card-one:after, .card-two:after, .card-three:after, .card-four:after {
+  .card:after {
     content: "";
     position: absolute;
     top: 0px;
@@ -193,6 +200,7 @@
     .card-title-link:hover {
       color: #b59f5b;
     }
+
 
   .card-one {
     background-image: url("../images/trend1.jpg");
@@ -339,7 +347,7 @@
   }
   
   .side-post-frame {
-    margin-left: 7%;
+    margin-left: 17px;
   }
   
   .side-post-title-link {
@@ -607,14 +615,14 @@
     margin-right: 30px;
   }
   
-  .social-icon-dribble, .social-icon-pinterest, .social-icon-tumblr {
+  .social-icon-link {
     display: block;
     position: relative;
     width: 20px;
     height: 20px;
   }
   
-  .social-icon-dribble::before, .social-icon-pinterest::before, .social-icon-tumblr::before {
+  .social-icon-link::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -623,15 +631,15 @@
     background-size: 100% 100%;
   }
   
-  .social-icon-dribble::before {
+  .dribble::before {
     background-image: url("../svg/001-dribbble.svg");
   }
   
-  .social-icon-pinterest::before {
+  .pinterest::before {
     background-image: url("../svg/002-pinterest.svg");
   }
   
-  .social-icon-tumblr::before {
+  .tumblr::before {
     background-image: url("../svg/003-tumblr.svg");
   }
   
@@ -881,16 +889,9 @@
 }
 
 .trends {
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.card-one, .card-two, .card-three, .card-four {
-  width: 49.6%;
-}
-
-.card-three, .card-four {
-  margin-top: 0.8%;
-}
 
 .post-list {
   width: 55%;
@@ -910,7 +911,7 @@
 }
 
 .product:nth-child(1n+3){
-  margin-top: 5%;
+  margin-top: 35px;
 }
 
 .container, .page, .shop, footer {
@@ -962,15 +963,11 @@
 
 @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
   .trends {
-    flex-wrap: nowrap;
+    flex-direction: row;
   }
 
-  .card-one, .card-two, .card-three, .card-four {
-    width: 24.8%;
-  }
-
-  .card-three, .card-four {
-    margin-top: 0px;
+  .card-gruppe {
+    flex-direction: row;
   }
 }
 
@@ -1001,12 +998,12 @@
   flex-direction: column;
 }
 
-.card-one, .card-two, .card-three, .card-four {
-  width: 100%;
+.card-gruppe {
+  flex-direction: column;
 }
 
-.card-two, .card-three, .card-four {
-  margin-top: 1%;
+.card {
+  width: 100%;
 }
 
 .post {
@@ -1047,7 +1044,7 @@
 }
 
 .product:nth-child(1n+2) {
-  margin-top: 5%;
+  margin-top: 35px;
 }
 
 .search-field {
@@ -1058,8 +1055,8 @@
   display: none;
 }
 
-.menu-item-three, .menu-item-four, .menu-item-five, .menu-item-six {
-  margin-left: 5%;
+.menu-item {
+  margin-left: 9px;
 }
 
 .hamburger-menu {
@@ -1142,21 +1139,13 @@
 @media (max-width: 640px) and (orientation: landscape) {
 
   .trends {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .card-one, .card-two, .card-three, .card-four {
-    width: 49.6%;
+    flex-direction: column;
   }
 
-  .card-two, .card-three, .card-four {
-    margin-top: 0px;
+  .card-gruppe {
+    flex-direction: row;
   }
   
-  .card-three, .card-four {
-    margin-top: 0.8%;
-  }
 
 }
 
