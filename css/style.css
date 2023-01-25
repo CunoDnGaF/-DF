@@ -228,7 +228,7 @@
   }
 
   .post-list {
-    width: 64%;
+    max-width: 768px;
   }
   
   .post {
@@ -313,7 +313,7 @@
   }
   
   .side-bar {
-    width: 23%;
+    max-width: 276px;
     font-family: OpenSans, Arial, sans-serif;
   }
   
@@ -894,7 +894,7 @@
 
 
 .post-list {
-  width: 55%;
+  max-width: 383px;
 }
 
 .post {
@@ -907,7 +907,8 @@
 }
 
 .product {
-  width: 47%;
+  min-width: 320px;
+  max-width: 327px;
 }
 
 .product:nth-child(1n+3){
@@ -924,7 +925,7 @@
 }
 
 .side-bar {
-  width: 39%;
+  max-width: 269px;
 }
 
 .header-logo {
@@ -972,7 +973,7 @@
 }
 
 @media (max-width: 640px) {
-
+  
   .header {
     background-image: url("../images/banner-mobile.jpg");
   }
@@ -990,8 +991,10 @@
 .intro {
   margin-top: 44px;
   margin-bottom: 216px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 36px;
+  max-width: 300px;
+  width: 100%;
 }
 
 .trends {
@@ -1027,16 +1030,25 @@
 .page {
   flex-direction: column;
   align-items: center;
-  
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
-.container, .page, .shop, footer, .side-bar {
-  width: 91%;
+.side-bar {
+  width: 100%;
+  max-width: 381px;
+}
+
+footer {
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
 .shop {
   flex-direction: column;
   align-items: center;
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
 .product {
@@ -1060,7 +1072,7 @@
 }
 
 .hamburger-menu {
-  width: 91%;
+  width: 100%;
 }
 
 .search-field {
@@ -1106,7 +1118,7 @@
   max-width: 390px;
   max-height: 545px;
   height: 90vh;
-  width: 95%;
+  max-width: 310px;
   padding: 30px 30px;
 }
 
